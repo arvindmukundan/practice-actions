@@ -16,13 +16,13 @@ jobs:
         run: npm ci
 
       - name: Run linter
-        run: eslint --ext .jsx --fix src
+        run: npm run lint
 
       - name: Run tests
-        run: vitest run
+        run: npm run test
 
       - name: Build project
-        run: vite build      
+        run: npm run build      
 
       - name: Deploy app
         run: echo "Deploying the application..."

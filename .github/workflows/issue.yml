@@ -1,0 +1,8 @@
+name: Issue pipeline
+on: issues
+jobs:
+  issue-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue info
+        run: echo "Issue is - ${{ toJson(github.event.issue) }}"
